@@ -92,7 +92,10 @@
 	    key: 'handleRChange',
 	    value: function handleRChange(e) {
 	      var rValue = e.target.value;
-	      if (rValue <= 255) {
+	      if (rValue <= 255 && rValue >= 0) {
+	        if (rValue === "") {
+	          e.target.value = "0";
+	        }
 	        this.setState({
 	          rValue: rValue
 	        });
@@ -102,7 +105,10 @@
 	    key: 'handleGChange',
 	    value: function handleGChange(e) {
 	      var gValue = e.target.value;
-	      if (gValue <= 255) {
+	      if (gValue <= 255 && gValue >= 0) {
+	        if (gValue === "") {
+	          e.target.value = "0";
+	        }
 	        this.setState({
 	          gValue: gValue
 	        });
@@ -112,7 +118,10 @@
 	    key: 'handleBChange',
 	    value: function handleBChange(e) {
 	      var bValue = e.target.value;
-	      if (bValue <= 255) {
+	      if (bValue <= 255 && bValue >= 0) {
+	        if (bValue === "") {
+	          e.target.value = "0";
+	        }
 	        this.setState({
 	          bValue: bValue
 	        });
@@ -149,8 +158,7 @@
 	          _react2.default.createElement(
 	            _reactBootstrap.Col,
 	            { md: 4, style: { backgroundColor: styles.rBack }, className: 'background-block' },
-	            'blockblockblockblockblockblockblockblockblock ',
-	            console.log('asdf' + { red: red } + ' ' + { green: green } + ' ' + { blue: blue })
+	            'blockblockblockblockblockblockblockblockblock'
 	          ),
 	          _react2.default.createElement(
 	            _reactBootstrap.Col,

@@ -17,7 +17,10 @@ class App extends React.Component {
 
   handleRChange(e) {
     const rValue = e.target.value;
-    if (rValue <= 255) {
+    if ( rValue <= 255 && rValue >= 0 ) {
+      if ( rValue === "" ) {
+        e.target.value = "0";
+      }
       this.setState({
         rValue: rValue,
       });
@@ -26,7 +29,10 @@ class App extends React.Component {
 
   handleGChange(e) {
     const gValue = e.target.value;
-    if (gValue <= 255) {
+    if ( gValue <= 255 && gValue >= 0 ) {
+      if ( gValue === "" ) {
+        e.target.value = "0";
+      }
       this.setState({
         gValue: gValue,
       });
@@ -35,7 +41,10 @@ class App extends React.Component {
 
   handleBChange(e) {
     const bValue = e.target.value;
-    if (bValue <= 255) {
+    if ( bValue <= 255 && bValue >= 0 ) {
+      if ( bValue === "" ) {
+        e.target.value = "0";
+      }
       this.setState({
         bValue: bValue,
       });
