@@ -22,7 +22,7 @@ class App extends React.Component {
         e.target.value = "0";
       }
       this.setState({
-        rValue: rValue,
+        rValue: e.target.value,
       });
     }
   }
@@ -34,7 +34,7 @@ class App extends React.Component {
         e.target.value = "0";
       }
       this.setState({
-        gValue: gValue,
+        gValue: e.target.value,
       });
     }
   }
@@ -46,7 +46,7 @@ class App extends React.Component {
         e.target.value = "0";
       }
       this.setState({
-        bValue: bValue,
+        bValue: e.target.value,
       });
     }
   }
