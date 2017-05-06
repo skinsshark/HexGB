@@ -43,21 +43,33 @@ class App extends React.Component {
   }
 
   render() {
+    const red = "rgb("+ this.state.rValue + ",0,0)";
+    const green = "rgb(0," + this.state.gValue + ",0)";
+    const blue = "rgb(0,0," + this.state.bValue + ")";
+    const mix = "rgb(" + this.state.rValue + "," + this.state.gValue + "," + this.state.bValue + ")";
+
+    const styles = {
+      rBack: red,
+      gBack: green,
+      bBack: blue,
+      mix: mix,
+    }
+
     return (
       <Grid className="page-wrapper">
-        <Row className="inputs">
+        <Row style={{backgroundColor: styles.mix}} className="inputs">
           <input type="number" value={this.state.rValue} onChange={this.handleRChange}/>
           <input type="number" value={this.state.gValue} onChange={this.handleGChange}/>
           <input type="number" value={this.state.bValue} onChange={this.handleBChange}/>
         </Row>
         <Row className="backgrounds">
-          <Col md={4} className="background-block">
+          <Col md={4} style={{backgroundColor: styles.rBack}} className="background-block">
             blockblockblockblockblockblockblockblockblock
           </Col>
-          <Col md={4} className="background-block">
+          <Col md={4} style={{backgroundColor: styles.gBack}} className="background-block">
             blockblockblockblockblockblockblockblockblock
           </Col>
-          <Col md={4} className="background-block">
+          <Col md={4} style={{backgroundColor: styles.bBack}} className="background-block">
             blockblockblockblockblockblockblockblockblock
           </Col>
         </Row>

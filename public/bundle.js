@@ -61,10 +61,6 @@
 	
 	var _reactBootstrap = __webpack_require__(/*! react-bootstrap */ 182);
 	
-	var _BackgroundBlock = __webpack_require__(/*! ./components/BackgroundBlock */ 437);
-	
-	var _BackgroundBlock2 = _interopRequireDefault(_BackgroundBlock);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -125,8 +121,16 @@
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var blockColour = {
-	        backgroundColor: 'rgb({{rValue}})'
+	      var red = "rgb(" + this.state.rValue + ",0,0)";
+	      var green = "rgb(0," + this.state.gValue + ",0)";
+	      var blue = "rgb(0,0," + this.state.bValue + ")";
+	      var mix = "rgb(" + this.state.rValue + "," + this.state.gValue + "," + this.state.bValue + ")";
+	
+	      var styles = {
+	        rBack: red,
+	        gBack: green,
+	        bBack: blue,
+	        mix: mix
 	      };
 	
 	      return _react2.default.createElement(
@@ -134,7 +138,7 @@
 	        { className: 'page-wrapper' },
 	        _react2.default.createElement(
 	          _reactBootstrap.Row,
-	          { className: 'inputs' },
+	          { style: { backgroundColor: styles.mix }, className: 'inputs' },
 	          _react2.default.createElement('input', { type: 'number', value: this.state.rValue, onChange: this.handleRChange }),
 	          _react2.default.createElement('input', { type: 'number', value: this.state.gValue, onChange: this.handleGChange }),
 	          _react2.default.createElement('input', { type: 'number', value: this.state.bValue, onChange: this.handleBChange })
@@ -144,17 +148,18 @@
 	          { className: 'backgrounds' },
 	          _react2.default.createElement(
 	            _reactBootstrap.Col,
-	            { md: 4, className: 'background-block' },
+	            { md: 4, style: { backgroundColor: styles.rBack }, className: 'background-block' },
+	            'blockblockblockblockblockblockblockblockblock ',
+	            console.log('asdf' + { red: red } + ' ' + { green: green } + ' ' + { blue: blue })
+	          ),
+	          _react2.default.createElement(
+	            _reactBootstrap.Col,
+	            { md: 4, style: { backgroundColor: styles.gBack }, className: 'background-block' },
 	            'blockblockblockblockblockblockblockblockblock'
 	          ),
 	          _react2.default.createElement(
 	            _reactBootstrap.Col,
-	            { md: 4, className: 'background-block' },
-	            'blockblockblockblockblockblockblockblockblock'
-	          ),
-	          _react2.default.createElement(
-	            _reactBootstrap.Col,
-	            { md: 4, className: 'background-block' },
+	            { md: 4, style: { backgroundColor: styles.bBack }, className: 'background-block' },
 	            'blockblockblockblockblockblockblockblockblock'
 	          )
 	        )
@@ -42804,64 +42809,6 @@
 	exports.bootstrapUtils = _bootstrapUtils;
 	exports.createChainedFunction = _createChainedFunction3['default'];
 	exports.ValidComponentChildren = _ValidComponentChildren3['default'];
-
-/***/ }),
-/* 437 */
-/*!*******************************************!*\
-  !*** ./app/components/BackgroundBlock.js ***!
-  \*******************************************/
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactBootstrap = __webpack_require__(/*! react-bootstrap */ 182);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var BackgroundBlock = function (_React$Component) {
-	  _inherits(BackgroundBlock, _React$Component);
-	
-	  function BackgroundBlock(props) {
-	    _classCallCheck(this, BackgroundBlock);
-	
-	    return _possibleConstructorReturn(this, (BackgroundBlock.__proto__ || Object.getPrototypeOf(BackgroundBlock)).call(this, props));
-	  }
-	
-	  _createClass(BackgroundBlock, [{
-	    key: 'render',
-	    value: function render() {
-	      var colour = this.props.colour;
-	      var blockColour = {
-	        backgroundColor: rgb(colour)
-	      };
-	      return _react2.default.createElement(
-	        _reactBootstrap.Col,
-	        { md: 4, style: blockColour, className: 'background-block' },
-	        'blockblockblockblockblockblockblockblockblock'
-	      );
-	    }
-	  }]);
-	
-	  return BackgroundBlock;
-	}(_react2.default.Component);
-	
-	exports.default = BackgroundBlock;
 
 /***/ })
 /******/ ]);
