@@ -157,17 +157,26 @@
 	          { className: 'backgrounds' },
 	          _react2.default.createElement(
 	            _reactBootstrap.Col,
-	            { md: 4, style: { backgroundColor: styles.rBack }, className: 'background-block' },
+	            { lg: 4, md: 4, sm: 12, xs: 12,
+	              style: { backgroundColor: styles.rBack },
+	              className: 'background-block background-block-red'
+	            },
 	            'blockblockblockblockblockblockblockblockblock'
 	          ),
 	          _react2.default.createElement(
 	            _reactBootstrap.Col,
-	            { md: 4, style: { backgroundColor: styles.gBack }, className: 'background-block' },
+	            { lg: 4, md: 4, sm: 12, xs: 12,
+	              style: { backgroundColor: styles.gBack },
+	              className: 'background-block background-block-green'
+	            },
 	            'blockblockblockblockblockblockblockblockblock'
 	          ),
 	          _react2.default.createElement(
 	            _reactBootstrap.Col,
-	            { md: 4, style: { backgroundColor: styles.bBack }, className: 'background-block' },
+	            { lg: 4, md: 4, sm: 12, xs: 12,
+	              style: { backgroundColor: styles.bBack },
+	              className: 'background-block background-block-blue'
+	            },
 	            'blockblockblockblockblockblockblockblockblock'
 	          )
 	        )

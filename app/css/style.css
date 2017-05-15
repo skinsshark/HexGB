@@ -29,6 +29,12 @@ body {
   z-index: 8;
 }
 
+@media only screen and (max-width: 992px) {
+  .row.inputs {
+    height: 20vh;
+  }
+}
+
 .container,
 .row.backgrounds,
 .background-block {
@@ -43,11 +49,20 @@ body {
 
 input {
   font-size: 8vw;
-  padding: 0 35px 0 40px;
+  /*padding: 0 35px 0 40px;*/
   width: 22vw;
   background-color: rgba(255, 255, 255, 0.5);
   border: none;
   margin: 1vw;
   text-align: right;
   z-index: 9;
+}
+
+@media only screen and (max-width: 992px) {
+  input {
+    display: block;
+    padding: 0 10px;
+    width: 30vw;
+    font-size: 10vw;
+  }
 }

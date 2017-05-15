@@ -72,13 +72,22 @@ class App extends React.Component {
           <input type="number" value={this.state.bValue} onChange={this.handleBChange}/>
         </Row>
         <Row className="backgrounds">
-          <Col md={4} style={{backgroundColor: styles.rBack}} className="background-block">
+          <Col lg={4} md={4} sm={12} xs={12}
+            style={{backgroundColor: styles.rBack}}
+            className="background-block background-block-red"
+          >
             blockblockblockblockblockblockblockblockblock
           </Col>
-          <Col md={4} style={{backgroundColor: styles.gBack}} className="background-block">
+          <Col lg={4} md={4} sm={12} xs={12}
+            style={{backgroundColor: styles.gBack}}
+            className="background-block background-block-green"
+          >
             blockblockblockblockblockblockblockblockblock
           </Col>
-          <Col md={4} style={{backgroundColor: styles.bBack}} className="background-block">
+          <Col lg={4} md={4} sm={12} xs={12}
+            style={{backgroundColor: styles.bBack}}
+            className="background-block background-block-blue"
+          >
             blockblockblockblockblockblockblockblockblock
           </Col>
         </Row>
